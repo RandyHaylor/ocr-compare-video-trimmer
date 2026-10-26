@@ -1,0 +1,21 @@
+[project]
+name = "ocr-compare-video-trimmer"
+version = "0.1.0"
+description = "Cut the static stretches out of screen recordings by OCR-comparing stills."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "easyocr>=1.7.2",
+    "gradio>=5.0",
+    "imageio-ffmpeg>=0.6.0",
+]
+
+[project.scripts]
+ocr-compare-video-trimmer = "ocr_compare_video_trimmer.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
